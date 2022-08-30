@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+
+:root {
+  --primary-dark:  #bce4eb;
+  --primary-green: #e77a6e;
+}
+
+body {
+  font-family: 'Cantora One', sans-serif;
+  overflow: hidden;
+  background-color: var(--primary-dark);
+  color: var(--primary-green);
+
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  text-align: center;
+  margin: auto;
+  border-radius: 20px;
+  border-style:outset;
+  border-color: var(--primary-green);
+
+}
+
+.description {
+  width: 40vw;
+  height: 10vh;
+  
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-top: 1vh;
+  color: var(--primary-green);
+
+}
+
+
+.heading {
+  
+  border-radius: 15px;
+  height: 10vh;
+  width: 40vw;
+  background-color: var(--primary-dark);
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  font-size: 26px; 
+}
+
+
+.text-box {
+  width: 15vw;
+  height: 8vh;
+ 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 2vh;
+  
+  
+
+}
+
+
+
+#amount {
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4.5vh;
+  border-radius: 5px;
+  margin-bottom: vh;
+  border-width: medium;
+  border-color: var(--primary-green);
+  
+}
+
+#given {
+  width: 25vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4.5vh;
+  border-radius: 5px;
+  margin-top: vh;
+  border-width: medium;
+  border-color: var(--primary-green);
+}
+
+#check-button {
+  width: 8vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 8vh;
+  border-radius: 6px;
+  margin-top: 2vh;
+  color: var(--primary-green);
+  font-family: 'Cantora One', sans-serif;
+  background-color: var(--primary-dark);
+  border-width: medium;
+  border-color: var(--primary-green);
+}
+
+
+
+.color {
+  margin-bottom: 1vh;;
+}
+
+  
+
+table td, th{
+  
+  border: 1px solid hwb(120 2% 98%)
+}
+th, td {
+  padding: 7px;
+  
+}
+table{
+  border-collapse: collapse;
+  
+  
+}
+
+.table-content {
+  border: 1px solid #6EE787;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vh;
+  
+}
+
+
+@media only screen and (max-width: 700px) {
+  
+  body {
+    font-family: 'Cantora One', sans-serif;
+    
+    overflow: hidden;
+  }
+  .container {
+    width: 80vw;
+    height: 90vh;
+    margin: auto;
+  }
+  
+  .heading {
+  font-size: 18px;
+  width: 50vw;
+    
+    
+  }
+  .description {
+    margin-top: 1.5rem;
+    font-size: 12px;
+    width: 50vw;
+  }
+  .text-box {
+    font-size: 15px;
+    margin-top: 3vh;
+  }
+  #check-button{
+    width: 20vw;
+  }
+  .table-content {
+    margin-bottom: 4vh;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  th, td {
+    padding: 2.5px;
+  }
+
+
+  .main{
+    font-size: 8px;
+  }
+  #no-of-notes {
+    font-size:10px;
+  }
+  .notes {
+    font-size: 10px;
+  }
+}
