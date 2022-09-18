@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
 
 :root {
-  --primary-blue:  #52cce1;
+  --primary-blue: #52cce1;
   --primary-black: #191a0f;
 }
 
@@ -21,7 +21,7 @@ body {
   width: 60vw;
   text-align: center;
   margin: auto;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 
 .description {
@@ -37,28 +37,28 @@ body {
 
 
 .heading {
-  
-  border-radius: 15px; 
+
+  border-radius: 15px;
   height: 10vh;
   width: 40vw;
   /* background-color: var(--primary-blue); */
   margin-left: auto;
   margin-right: auto;
   border-style: solid;
-  font-size: 26px; 
+  font-size: 26px;
 }
 
 
 .text-box {
   width: 15vw;
   height: 8vh;
- 
+
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   margin-top: 2vh;
-  
-  
+
+
 
 }
 
@@ -71,7 +71,7 @@ body {
   margin-bottom: vh;
   border-width: medium;
   border-color: var(--primary-black);
-  
+
 }
 
 #given {
@@ -102,23 +102,28 @@ body {
 
 
 .color {
-  margin-bottom: 1vh;;
+  margin-bottom: 1vh;
+  ;
 }
 
-  
 
-table td, th{
-  
+
+table td,
+th {
+
   border: 1px solid hwb(120 2% 98%)
 }
-th, td {
+
+th,
+td {
   padding: 7px;
-  
+
 }
-table{
+
+table {
   border-collapse: collapse;
-  
-  
+
+
 }
 
 .table-content {
@@ -127,58 +132,67 @@ table{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1vh;
-  
+
 }
 
 
 @media only screen and (max-width: 700px) {
-  
+
   body {
     font-family: 'Cantora One', sans-serif;
-    
+
     overflow: hidden;
   }
+
   .container {
     width: 80vw;
     height: 90vh;
     margin: auto;
   }
-  
+
   .heading {
-  font-size: 18px;
-  width: 50vw;
-    
-    
+    font-size: 18px;
+    width: 50vw;
+
+
   }
+
   .description {
     margin-top: 1.5rem;
     font-size: 12px;
     width: 50vw;
   }
+
   .text-box {
     font-size: 15px;
     margin-top: 3vh;
   }
-  #check-button{
+
+  #check-button {
     width: 20vw;
   }
+
   .table-content {
     margin-bottom: 4vh;
     width: 70vw;
     margin-left: auto;
     margin-right: auto;
   }
-  th, td {
+
+  th,
+  td {
     padding: 2.5px;
   }
 
 
-  .main{
+  .main {
     font-size: 8px;
   }
+
   #no-of-notes {
-    font-size:10px;
+    font-size: 10px;
   }
+
   .notes {
     font-size: 10px;
   }

@@ -19,7 +19,7 @@ checkButton.addEventListener("click", function validateBillAndGivenAmount() {
       );
     } else {
       displayMessage(
-        "You wanna washes the plates?"
+        "Do you wanna washes the plates?"
       );
     }
   
