@@ -6,14 +6,14 @@ const notes = document.querySelectorAll(".no-of-notes");
 const AllNotes = [2000, 1000, 500, 100, 50, 20, 10, 5, 1];
 checkButton.addEventListener("click", function validateBillAndGivenAmount() {
   hideMessage();
-  
+
   if (billAmount.value > 0) {
 
-    if(givenAmount.value >= billAmount.value) {
-      const returnedAmount = givenAmount.value - billAmount.value
-      totalReturnedAmount(returnedAmount);
+    if (number(givenAmount.value >= billAmount.value)) {
+      const returnedAmount = number(givenAmount.value) - billAmount.value
+      totalReturnedAmount(number(returnedAmount));
 
-    } else if (typeof givenAmount.value == 'string') {
+    } else if (number(givenAmount.value <= billAmount.value)) {
       displayMessage(
         "Bill amount must be a number!"
       );
@@ -22,12 +22,12 @@ checkButton.addEventListener("click", function validateBillAndGivenAmount() {
         "Do you wanna washes the plates?"
       );
     }
-  
-  }  else if (typeof billAmount.value == 'string') {
+
+  } else if (typeof billAmount.value == 'string') {
     displayMessage(
       "Bill amount must be a number!"
     );
-  }  else {
+  } else {
     displayMessage(
       "Invalid bill amount!"
     );
@@ -35,8 +35,10 @@ checkButton.addEventListener("click", function validateBillAndGivenAmount() {
 });
 
 function totalReturnedAmount(returnedAmount) {
-  for(let i=0; i<AllNotes.length; i++) {
-    const noOfNotes = Math.trunc(returnedAmount/ AllNotes[i]);
+  for (let i = 0; i < AllNotes.length; i++) {
+    const noOfNotes = Math.trunc(returnedAmount / AllNotes[i]);
+    // returnedAmount = returnedAmount % AllNotes[i];
+    amountToBeReturned %= availableNotes[i];
     returnedAmount = returnedAmount % AllNotes[i];
     notes[i].innerText = noOfNotes;
   }
