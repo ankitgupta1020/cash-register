@@ -9,17 +9,17 @@ checkButton.addEventListener("click", function validateBillAndGivenAmount() {
 
   if (billAmount.value > 0) {
 
-    if (number(givenAmount.value >= billAmount.value)) {
-      const returnedAmount = number(givenAmount.value) - billAmount.value
-      totalReturnedAmount(number(returnedAmount));
+    if (givenAmount.value >= billAmount.value) {
+      const returnedAmount = givenAmount.value - billAmount.value
+      totalReturnedAmount(returnedAmount);
 
-    } else if (number(givenAmount.value <= billAmount.value)) {
+    } else if (typeof givenAmount.value == 'string') {
       displayMessage(
         "Bill amount must be a number!"
       );
     } else {
       displayMessage(
-        "Do you wanna washes the plates?"
+        "You wanna washes the plates?"
       );
     }
 
@@ -37,8 +37,6 @@ checkButton.addEventListener("click", function validateBillAndGivenAmount() {
 function totalReturnedAmount(returnedAmount) {
   for (let i = 0; i < AllNotes.length; i++) {
     const noOfNotes = Math.trunc(returnedAmount / AllNotes[i]);
-    // returnedAmount = returnedAmount % AllNotes[i];
-    amountToBeReturned %= availableNotes[i];
     returnedAmount = returnedAmount % AllNotes[i];
     notes[i].innerText = noOfNotes;
   }
