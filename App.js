@@ -7,10 +7,10 @@ const AllNotes = [2000, 1000, 500, 100, 50, 20, 10, 5, 1];
 checkButton.addEventListener("click", function validateBillAndGivenAmount() {
   hideMessage();
 
-  if (billAmount.value > 0) {
+  if (Number(billAmount.value) > 0) {
 
-    if (givenAmount.value >= billAmount.value) {
-      const returnedAmount = givenAmount.value - billAmount.value
+    if (Number(givenAmount.value) >= Number(billAmount.value)) {
+      const returnedAmount = Number(givenAmount.value) - Number(billAmount.value)
       totalReturnedAmount(returnedAmount);
 
     } else if (typeof givenAmount.value == 'string') {
