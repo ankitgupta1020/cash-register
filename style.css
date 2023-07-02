@@ -1,199 +1,144 @@
-@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
-
-:root {
-  --primary-blue: #52cce1;
-  --primary-black: #191a0f;
-}
-
 body {
-  font-family: 'Cantora One', sans-serif;
-  overflow: hidden;
-  background-color: var(--primary-blue);
-  color: var(--primary-black);
-
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
-
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
 .container {
-  display: flex;
-  flex-direction: column;
-  width: 60vw;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 30px;
   text-align: center;
-  margin: auto;
-  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
 }
 
 .description {
-  width: 40vw;
-  height: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  margin-top: 1vh;
-  color: var(--primary-black);
-
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
 }
-
-
-.heading {
-
-  border-radius: 15px;
-  height: 10vh;
-  width: 40vw;
-  /* background-color: var(--primary-blue); */
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  font-size: 26px;
-}
-
 
 .text-box {
-  width: 15vw;
-  height: 8vh;
-
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
-  margin-top: 2vh;
-
-
-
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
 }
 
-#amount {
-  width: 25vw;
-  margin-left: auto;
-  margin-right: auto;
-  height: 4.5vh;
-  border-radius: 5px;
-  margin-bottom: vh;
-  border-width: medium;
-  border-color: var(--primary-black);
-
+.input-box {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-#given {
-  width: 25vw;
-  margin-left: auto;
-  margin-right: auto;
-  height: 4.5vh;
-  border-radius: 5px;
-  margin-top: vh;
-  border-width: medium;
-  border-color: var(--primary-black);
+.button-container {
+  margin-top: 20px;
 }
 
-#check-button {
-  width: 8vw;
-  margin-left: auto;
-  margin-right: auto;
-  height: 5vh;
-  border-radius: 6px;
-  margin-top: 2vh;
-  color: var(--primary-red);
-  font-family: 'Cantora One', sans-serif;
-  background-color: var(--primary-blue);
-  border-width: medium;
-  border-color: var(--primary-black);
+.check-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-
-
-.color {
-  margin-bottom: 1vh;
-  ;
-}
-
-
-
-table td,
-th {
-
-  border: 1px solid hwb(120 2% 98%)
-}
-
-th,
-td {
-  padding: 7px;
-
-}
-
-table {
-  border-collapse: collapse;
-
-
+.error-message {
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
 }
 
 .table-content {
-  border: 1px solid #6EE787;
-  width: 50vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1vh;
-
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
 }
 
+.table-content th {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #007bff;
+}
 
-@media only screen and (max-width: 700px) {
+.table-content td {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
 
-  body {
-    font-family: 'Cantora One', sans-serif;
+.table-content .notes {
+  font-weight: bold;
+}
 
-    overflow: hidden;
-  }
+.table-content .no-of-notes:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 
+.table-content .no-of-notes:nth-child(even) {
+  background-color: #d9d9d9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .container {
-    width: 80vw;
-    height: 90vh;
-    margin: auto;
+      padding: 20px;
   }
 
   .heading {
-    font-size: 18px;
-    width: 50vw;
-
-
+      font-size: 24px;
   }
 
   .description {
-    margin-top: 1.5rem;
-    font-size: 12px;
-    width: 50vw;
+      font-size: 14px;
   }
 
   .text-box {
-    font-size: 15px;
-    margin-top: 3vh;
+      font-size: 14px;
   }
 
-  #check-button {
-    width: 20vw;
+  .input-box {
+      font-size: 14px;
   }
 
-  .table-content {
-    margin-bottom: 4vh;
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
+  .check-button {
+      font-size: 14px;
   }
 
-  th,
-  td {
-    padding: 2.5px;
+  .error-message {
+      font-size: 14px;
   }
 
-
-  .main {
-    font-size: 8px;
+  .table-content th {
+      font-size: 14px;
   }
 
-  #no-of-notes {
-    font-size: 10px;
-  }
-
-  .notes {
-    font-size: 10px;
+  .table-content td {
+      font-size: 14px;
   }
 }

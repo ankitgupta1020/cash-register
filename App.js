@@ -4,40 +4,33 @@ const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 const notes = document.querySelectorAll(".no-of-notes");
 const AllNotes = [2000, 1000, 500, 100, 50, 20, 10, 5, 1];
-checkButton.addEventListener("click", function validateBillAndGivenAmount() {
+
+checkButton.addEventListener("click", validateBillAndGivenAmount);
+
+function validateBillAndGivenAmount() {
   hideMessage();
 
-  if (Number(billAmount.value) > 0) {
+  const bill = Number(billAmount.value);
+  const given = Number(givenAmount.value);
 
-    if (Number(givenAmount.value) >= Number(billAmount.value)) {
-      const returnedAmount = Number(givenAmount.value) - Number(billAmount.value)
-      totalReturnedAmount(returnedAmount);
-
-    } else if (typeof givenAmount.value == 'string') {
-      displayMessage(
-        "Bill amount must be a number!"
-      );
-    } else {
-      displayMessage(
-        "You wanna washes the plates?"
-      );
-    }
-
-  } else if (typeof billAmount.value == 'string') {
-    displayMessage(
-      "Bill amount must be a number!"
-    );
-  } else {
-    displayMessage(
-      "Invalid bill amount!"
-    );
+  if (isNaN(bill) || isNaN(given)) {
+    displayMessage("Bill and given amounts must be numbers!");
+    return;
   }
-});
+
+  if (given < bill) {
+    displayMessage("Insufficient amount! Please give more money.");
+    return;
+  }
+
+  const returnedAmount = given - bill;
+  totalReturnedAmount(returnedAmount);
+}
 
 function totalReturnedAmount(returnedAmount) {
   for (let i = 0; i < AllNotes.length; i++) {
     const noOfNotes = Math.trunc(returnedAmount / AllNotes[i]);
-    returnedAmount = returnedAmount % AllNotes[i];
+    returnedAmount %= AllNotes[i];
     notes[i].innerText = noOfNotes;
   }
 }

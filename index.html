@@ -7,25 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cash Register</title>
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
             <h1 class="heading">Cash Register Manager</h1>
-            <p class="description">Enter the bill amount and cash given by the customer and know minimum number of notes
-                to return</p>
+            <p class="description">Enter the bill amount and cash given by the customer to know the minimum number of
+                notes to return</p>
             <label class="text-box" for="amount">Bill Amount</label>
-            <input id="amount" type="number" />
-            <label class="text-box" for="given"> Given Amount</label>
-            <input id="given" type="number" />
-            <button id="check-button">Check</button>
-            <p id="error-message"></p>
+            <input id="amount" class="input-box" type="number" placeholder="Enter bill amount" />
+            <label class="text-box" for="given">Given Amount</label>
+            <input id="given" class="input-box" type="number" placeholder="Enter cash given" />
+            <div class="button-container">
+                <button id="check-button" class="check-button">Check</button>
+            </div>
+            <p id="error-message" class="error-message"></p>
             <table class="table-content">
-                <caption class="color">
-                    Return Change
-                </caption>
+                <caption class="color">Return Change</caption>
                 <tr>
                     <th class="main">No. of Notes</th>
                     <td class="no-of-notes"></td>
@@ -51,12 +50,9 @@
                     <td class="notes">1</td>
                 </tr>
             </table>
-
         </div>
-
     </div>
-
+    <script src="App.js"></script>
 </body>
-<script src="./App.js"></script>
 
 </html>
